@@ -1,14 +1,12 @@
 version: "3"
 services:
-    pip_install:
-        command: pip3 install -r requirements.txt
     gen_data:
         build: generate_data/
         command: python ./data_creation.py
     model:
-        build: generate_data/
+        build: model/
         command: python ./model_preprocessing.py
         command: python ./model_preparation.py
     test:
-        build: generate_data/
+        build: test/
         command: python ./model_testing.py
