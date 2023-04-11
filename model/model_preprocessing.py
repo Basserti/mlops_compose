@@ -15,3 +15,4 @@ if __name__ == '__main__':
         pickle.dump(scaler,  f)
 
     print('scaler fitted and saved in main folder')
+    
